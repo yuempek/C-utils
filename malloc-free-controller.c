@@ -58,7 +58,7 @@ void ymp_free(void *ptr){
 
 void print_ymp_ptr_arr(){
   for(int i = 0; i < ymp_ptr_arr_idx; i++)
-    printf("%d-", (unsigned) ymp_ptr_arr[i]);
+    printf("%d-", (unsigned long) ymp_ptr_arr[i]);
    printf("\n");
 }
 
@@ -91,9 +91,15 @@ int main(){
   print_ymp_ptr_arr();
   
   ymp_free(ptr5);
+  ymp_free(ptr5);
+  ymp_free(ptr5);
+  ymp_free(ptr5);
   print_ymp_ptr_arr();
   
-  
+  void *ptr = malloc(3);
+  free(ptr);
+  free(ptr); //potential error cause
 
+  printf("done");
 
 }
