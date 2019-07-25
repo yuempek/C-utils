@@ -9,3 +9,9 @@ solve multiple free problem.
 
   
   
+## drop2shell.c
+what you enter command, runs on shell that.
+
+
+## randomd.c/.h
+uniform distributed double random generator from 0 to 1 
